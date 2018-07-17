@@ -67,7 +67,7 @@ public class Coder {
 
     /**
      * SHA加密（安全散列算法）
-     * 数字签名等密码学应用中重要的工具，被广泛地应用于电子商务等信息安全领域。 
+     * 数字签名等密码学应用中重要的工具，被广泛地应用于电子商务等信息安全领域。
      *
      * @param data
      * @return
@@ -77,7 +77,6 @@ public class Coder {
         MessageDigest sha = MessageDigest.getInstance(KEY_SHA);
         sha.update(data);
         return sha.digest();
-
     }
 
     /**
@@ -111,35 +110,19 @@ public class Coder {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public static void main(String[] args) throws Exception {
         //1.BASE64加解密
-        String name = "zhangsan";
-        String input = encryptBASE64(name.getBytes());
-        System.out.println("加密后:"+input);
-        byte[] output = decryptBASE64(input);
-        String outputStr = new String(output);
-        System.out.println("解密后:"+ outputStr);
+        String name = "张三";
+//        String input = encryptBASE64(name.getBytes());
+//        System.out.println("加密后:"+input);
+//        byte[] output = decryptBASE64(input);
+//        String outputStr = new String(output);
+//        System.out.println("解密后:"+ outputStr);
+
+        //2.MD5加密
+        byte[] b = encryptMD5(name.getBytes());
+        String s = new String(b);
+        System.out.println(s);
     }
 
 }
