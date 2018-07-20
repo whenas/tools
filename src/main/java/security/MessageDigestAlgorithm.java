@@ -1,5 +1,6 @@
 package security;
 
+import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.binary.Hex;
 import sun.misc.BASE64Encoder;
 
@@ -81,12 +82,14 @@ public class MessageDigestAlgorithm {
 
 
     public static void main(String[] args) {
-        MessageDigestAlgorithm mda = new MessageDigestAlgorithm();
-        String str = mda.encryptMD5(message);
-        System.out.println(str);
-        System.out.println(mda.encodeSHA256(message));
-        System.out.println(mda.hmacMD5(message));
+//        MessageDigestAlgorithm mda = new MessageDigestAlgorithm();
+//        String str = mda.encryptMD5(message);
+//        System.out.println(str);
+//        System.out.println(mda.encodeSHA256(message));
+//        System.out.println(mda.hmacMD5(message));
 
+       byte[] aa =  Base64.decodeBase64("46KEs1fM2O3izlOv");
+        System.out.println(new String(aa));
 
     }
 
