@@ -94,7 +94,7 @@ public class DistributedLock {
             e.printStackTrace();
             return false;
         }
-        log.info("分布式锁释放完毕");
+        log.info("分布式锁释放完毕"); 
         return true;
     }
 

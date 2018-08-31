@@ -55,7 +55,6 @@ public class SymmetricEncoder {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         //如果有错就返加nulll
         return null;
     }
